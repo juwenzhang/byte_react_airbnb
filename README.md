@@ -170,6 +170,7 @@ export default homeSlice.reducer
 > * 文件夹，文件名统一小写，多个单词使用连接符 - 连通
 > * JavaScript 变量使用小驼峰命名，组件名使用大驼峰命名
 > * CSS 采用 style-component 来实现的编写的
+>   * npm install styled-components
 > * 函数式组件的定义一定使用纯组件，使用 memo 进行包裹
 > * 组件内部的书写规范
 >   * 组件内部的 state 管理
