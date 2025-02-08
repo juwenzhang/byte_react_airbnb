@@ -26,3 +26,13 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.BYTE_REACT_AIRBNB }}
         BRANCH: master
         FOLDER: build
+
+    # 示例：使用环境文件替代 set-output
+    - name: Create Environment File
+      run: |
+        echo "DEPLOY_STATUS=success" > .env
+
+    - name: Use Environment File
+      run: |
+        source .env
+        echo "Deployment status: $DEPLOY_STATUS"
