@@ -55,6 +55,7 @@ export const RightHeaderWrapper = styled.div`
             right: 0;
             top: 40px;
             border-radius: 7px;
+            z-index: 999;
 
             .top, .bottom {
                 padding: 10px 0;

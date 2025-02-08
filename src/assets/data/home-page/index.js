@@ -1,0 +1,1 @@
+export { HighPriceGoodsInfoData } from "./HighPriceGoodsInfoData";
