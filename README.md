@@ -47,7 +47,7 @@
 ---
 ### router 配置
 * `npm install react-router-dom`
-  * 首先先在我们的 index.js 中开启 hash 或者 history 模式的路由
+  * 首先先在我们的 index.jsx 中开启 hash 或者 history 模式的路由
     * HashRouter 或者说 BrowserRouter 组件，将下面的组件进行包裹起来
   * 然后进行在我们的 router 目录中进行对应的路由配置吧
     * 再在需要进行使用的地方结合 useRoutes 使用即可
@@ -131,7 +131,7 @@ export default App;
 * 使用流程
   * 和我们的路由差不多
     * 都是先书写对应的配置部分
-    * 然后实现对 src/index.js 进行内置组件包裹的部分
+    * 然后实现对 src/index.jsx 进行内置组件包裹的部分
     * 最后才是在组件中可以正常使用的部分了
 ```javascript
 // 使用我们的 toolkit 的开发模式

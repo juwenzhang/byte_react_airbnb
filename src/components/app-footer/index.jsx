@@ -14,7 +14,13 @@ const AppFooter = memo(() => {
                             {
                                 item.list.map((link, index) => (
                                     <div key={link.id}>
-                                        <a href={link.url} target="_blank">{ link.title }</a>
+                                        <a
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            { link.title }
+                                        </a>
                                     </div>
                                 ))
                             }

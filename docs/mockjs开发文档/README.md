@@ -24,9 +24,9 @@
 ### 安装 MockJS
 * MockJs 是一种偏重于解决前后端网络请求交互的自动生成数据给前端页面使用的工具
   * 安装 MockJS: `npm install mockjs` 或者 `npm i mockjs`
-  * 首先我们的案例统一在 index.js 文件中执行
-    * `node index.js`
-    * `nodemon index.js`
+  * 首先我们的案例统一在 index.jsx 文件中执行
+    * `node index.jsx`
+    * `nodemon index.jsx`
   * node 和 nodemon 启动服务的区别
     * node 的话如果我们的文件内容被修改了，我们需要的是进行重新手动的启动运行js文件
     * nodemon 的话实现的就是内容被修改了，自动的检测修改了的内容，自动化的重新运行js文件
