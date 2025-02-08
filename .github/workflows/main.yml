@@ -21,8 +21,8 @@ jobs:
      
     # react项目的FOLDER为build，vue项目改为dist   
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
-        ACCESS_TOKEN: ${{ secrets.byte_react_airbnb }}
+        ACCESS_TOKEN: ${{ secrets.BYTE_REACT_AIRBNB }}
         BRANCH: master
         FOLDER: build
