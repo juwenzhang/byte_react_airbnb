@@ -5,7 +5,6 @@ export const LazyStyle = styled.div`
         width: 100%;
         height: 100vh;
         background-color: #a8a7a7;
-        position: relative;
         
         .context {
             overflow: hidden;

@@ -9,11 +9,11 @@ import store from "./store/index";
 import "normalize.css"
 import "./assets/css/index.less"
 import { lightTheme } from "./assets/theme"
-import {LazyPage} from "./components/lazy/lazyPage";
+import { LazyPage } from "./components/lazy/lazyPage";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <Suspense fallback={<LazyPage/>}>
             <HashRouter>
                 <Provider store={store}>
@@ -23,5 +23,5 @@ root.render(
                 </Provider>
             </HashRouter>
         </Suspense>
-    </React.StrictMode>
+    // </React.StrictMode>
 )

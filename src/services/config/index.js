@@ -10,7 +10,7 @@ class JWZRequestConfig {
         })
 
         this.instance.interceptors.request.use((config) => {
-            const token = localStorage.getItem("token")
+            const token = localStorage.getItem("token") // BOM 操作了  js  DOM  BOM
                 || sessionStorage.getItem("token")
                 || localStorage.getItem("cookie")
                 || sessionStorage.removeItem("cookie")
@@ -20,32 +20,32 @@ class JWZRequestConfig {
             }
             return config
         }, err => {
-            return Promise.reject(err)
+            // console.log(err)
         })
 
-        this.instance.interceptors.response.use((res) => {
-            return res?.data
-        }, (err) => {
-            if (err.response) {
-                switch (err?.response?.status) {
-                    // 根据不同的响应结果，返回不同的值
-                    case 401:
-                        return Promise.reject(err?.response?.desc)
-                    case 403:
-                        return Promise.reject(err?.response?.desc)
-                    case 404:
-                        return Promise.reject(err?.response?.desc)
-                    case 500:
-                        return Promise.reject("垃圾后端工程师 | 垃圾服务器（但我是 fullStack）")
-                    default:
-                        return Promise.reject(err?.response?.desc)
-                }
-            } else if(err?.request) {
-                return Promise.reject(err?.request)  // 请求发出了，但是服务端没有做出响应
-            } else {
-                return Promise.reject(err)  // 客户端请求过程错误
-            }
-        })
+        // this.instance.interceptors.response.use((res) => {
+        //     return res?.data
+        // }, (err) => {
+        //     if (err?.response) {
+        //         switch (err?.response?.status) {
+        //             // 根据不同的响应结果，返回不同的值
+        //             case 401:
+        //                 return Promise.reject(err?.response?.desc)
+        //             case 403:
+        //                 return Promise.reject(err?.response?.desc)
+        //             case 404:
+        //                 return Promise.reject(err?.response?.desc)
+        //             case 500:
+        //                 return Promise.reject("垃圾后端工程师 | 垃圾服务器（但我是 fullStack）")
+        //             default:
+        //                 return Promise.reject(err?.response?.desc)
+        //         }
+        //     } else if(err?.request) {
+        //         return Promise.reject(err?.request)  // 请求发出了，但是服务端没有做出响应
+        //     } else {
+        //         return Promise.reject(err)  // 客户端请求过程错误
+        //     }
+        // })
     }
 
     request(config) {
@@ -53,7 +53,8 @@ class JWZRequestConfig {
             this.instance.request(config).then(response => {
                 resolve(response)
             }).catch(error => {
-                reject(error)
+                // reject(error)
+                // console.log(error)
             })
         })
     }
