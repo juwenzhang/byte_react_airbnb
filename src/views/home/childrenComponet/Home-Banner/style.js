@@ -7,6 +7,11 @@ const HomeBannerWrapper = styled.div`
     width: 100%;
     height: 530px;
     background: #938f8f url(${BackgroundImage}) no-repeat center/cover;
+
+    @media (max-width: 768px) {
+        height: 300px; // 移动端高度调整为 300px
+        background: #938f8f url(${BackgroundImage}) no-repeat center/cover;
+    }
 `
 
 export default HomeBannerWrapper;

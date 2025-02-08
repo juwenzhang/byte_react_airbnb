@@ -17,7 +17,8 @@ module.exports = {
             "services": importUrl("src/services"),
             "store": importUrl("src/store"),
             "utils": importUrl("src/utils"),
-            "views": importUrl("src/views")
+            "views": importUrl("src/views"),
+            '@mui/styled-engine': '@mui/styled-engine-sc'
         }
     },
     // less config: please observe ant-design-ui
@@ -29,11 +30,11 @@ module.exports = {
                 lessLoaderOptions: {
                     lessOptions: {
                         // 下面的配置可要可不要，是主题配置的
-                        // modifyVars: {
-                        //     "@primary-color": "#1DA57A",
-                        //     "@link-color": "#1DA57A",
-                        //     "@border-radius-base": "2px",
-                        // },
+                        modifyVars: {
+                            // "@primary-color": "#1DA57A",
+                            // "@link-color": "#1DA57A",
+                            // "@border-radius-base": "2px",
+                        },
                         javascriptEnabled: true,
                     }
                 }
