@@ -11,11 +11,6 @@ const HomeWrapper = styled.div`
             width: 100%;
             padding: 0 16px;
         }
-        .goodPrice {
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
     }
 `
 

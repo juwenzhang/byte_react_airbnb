@@ -11,11 +11,11 @@ export const fetchHighPriceGoodsInfoDataAction = createAsyncThunk(
 );
 export const fetchMiddlePriceGoodsInfoDataAction = createAsyncThunk(
     "fetchMiddlePriceGoodsInfoDataAction",
-    fetchData(getHomeMiddlePriceData(), sectionTwoData)
+    fetchData(getHomeMiddlePriceData, sectionTwoData)
 );
 export const fetchLowerPriceGoodsInfoDataAction = createAsyncThunk(
     "fetchLowerPriceGoodsInfoDataAction",
-    fetchData(getHomeLowerPriceData(), sectionThreeData)
+    fetchData(getHomeLowerPriceData, sectionThreeData)
 )
 
 
