@@ -1,7 +1,19 @@
 import JWZRequest from "../index";
 
-export const getHomeGoodPriceData = () => {
+export const getHomeHighGoodPriceData = () => {
     return JWZRequest.get({
-        url: "/home/goodprice"
+        url: "/home/HighGoodPrice"
+    })
+}
+
+export const getHomeMiddlePriceData = () => {
+    return JWZRequest.get({
+        url: "/home/MiddleGoodPrice"
+    })
+}
+
+export const getHomeLowerPriceData = () => {
+    return JWZRequest.get({
+        url: "/home/LowerGoodPrice"
     })
 }
