@@ -3,9 +3,9 @@ import HomeWrapper from "./style";
 import HomeBanner from "./childrenComponet/Home-Banner/HomeBanner";
 import {shallowEqual, useDispatch, useSelector} from "react-redux";
 import {fetchHighPriceGoodsInfoDataAction} from "../../store/modules/home";
-import {LazyPage} from "../../components/lazy/lazyPage";
+import {LazyPage} from "../../components/app-lazy/lazyPage";
 import HomeSectionHeader from "../../components/home-section-header";
-import SectionItem from "../../components/section-item";
+import SectionList from "../../components/section-list";
 
 const Home = memo(() => {
     // 定义页面数据开始
@@ -45,17 +45,9 @@ const Home = memo(() => {
                             title={HighPriceGoodsInfo?.title}
                             desc={HighPriceGoodsInfo?.desc}
                         />
-                        <div className="home-content-highPrice">
-                            {
-                                HighPriceGoodsInfo?.goodsList?.slice(0, 8).map((item) => {
-                                    return (
-                                        <SectionItem
-                                            item={item}
-                                            key={item?.id}/>
-                                    )
-                                })
-                            }
-                        </div>
+                        <SectionList
+                            goodsList={HighPriceGoodsInfo?.goodsList}
+                        />
                     </div>
                 </div>
             </HomeWrapper>

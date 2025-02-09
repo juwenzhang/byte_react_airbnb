@@ -27,6 +27,7 @@ function createGoodsList(count,
             stock: faker.number.int({ min: 1, max: 100 }),
             price: faker.commerce.price(),
             imageList: createImageList(),
+            rate: faker.number.int({min: 0, max: 5}),
             publishDate: faker.date.recent().toISOString(),
     }), {
         count
