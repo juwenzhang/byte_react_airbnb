@@ -1,4 +1,4 @@
-export function fetchData(callback1, callback2, count = 8) {
+export function fetchData(callback1, callback2, count = 100) {
     return async () => {
         try {
             const res  = await callback1();

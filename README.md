@@ -165,6 +165,10 @@ export default homeSlice.reducer
 * 但是为了降低我们的项目对 axios 第三方库的依赖程度
   * 我们是需要进行二次封装后使用的，降低耦合度吧
 
+### base-ui 
+* 含有对 ant-design 或者 material-ui 的二次封装
+  * 欢迎各位前端开源爱好者的提交 pr
+
 ---
 ### 项目开发规范
 > * 文件夹，文件名统一小写，多个单词使用连接符 - 连通

@@ -12,14 +12,9 @@ const HomeWrapper = styled.div`
             padding: 0 16px;
         }
         .goodPrice {
+            width: 100%;
             margin-top: 20px;
             margin-bottom: 20px;
-            
-            .home-content-highPrice {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 -8px;
-            }
         }
     }
 `

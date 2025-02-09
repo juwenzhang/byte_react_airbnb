@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionItemWrapper = styled.div`
-    width: 25%;
+    width: ${props => props.$avg};
     padding: 8px;
     box-sizing: border-box;
 
@@ -23,6 +23,7 @@ export const SectionItemWrapper = styled.div`
                 top: 0;
                 width: 100%;
                 height: 100%;
+                text-align: center;
             }
 
             @media (max-width: 768px) {
@@ -44,6 +45,9 @@ export const SectionItemWrapper = styled.div`
 
         .section-item-price {
             color: ${props => props.$ItemTextPriceColor};
+        }
+        
+        .section-item-rate {
         }
     }
 
