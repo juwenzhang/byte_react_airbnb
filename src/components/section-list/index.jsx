@@ -5,11 +5,10 @@ import SectionListWrapper from "./style/style";
 
 
 const SectionList = memo((props) => {
-
     const {
         goodsList = [],
-        elementNum = 8,
-        showRows = 2
+        elementNum = 9,
+        showRows = 3
     } = props
 
     const avg = `${(1 / (elementNum / showRows) * 100).toFixed(2)}%`

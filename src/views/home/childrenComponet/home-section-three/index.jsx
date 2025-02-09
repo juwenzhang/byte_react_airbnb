@@ -33,6 +33,8 @@ const HomeSectionThree = memo(() => {
         <SectionThreeWrapper>
             <SectionAll
                 data={LowerPriceGoodsInfo}
+                elementNum={10}
+                showRows={2}
             />
         </SectionThreeWrapper>
     )

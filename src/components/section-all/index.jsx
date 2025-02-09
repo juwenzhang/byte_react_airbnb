@@ -7,7 +7,9 @@ import SectionAllWrapper from "./style/style"
 
 const SectionAll = memo((props) => {
     const {
-        data = {}
+        data = {},
+        elementNum = 8,
+        showRows = 2
     } = props
 
     return (
@@ -18,13 +20,17 @@ const SectionAll = memo((props) => {
             />
             <SectionList
                 goodsList={data?.goodsList}
+                elementNum={elementNum}
+                showRows={showRows}
             />
         </SectionAllWrapper>
     )
 })
 
 SectionAll.prototype = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    elementNum: PropTypes.number,
+    showRows: PropTypes.number
 }
 
 export default SectionAll
