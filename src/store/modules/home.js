@@ -42,7 +42,7 @@ const homeSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchHighPriceGoodsInfoDataAction.fulfilled, (state, action) => {
-                // console.log(action.payload)
+                console.log(action.payload)
                 // 由于是自己的 mock 的数据，所以说不管如何都是 fulfilled 的情况，如果想要有错误，可以上面的 fetch 函数就需要改动
                 state.HighPriceGoodsInfo = action.payload;
             })

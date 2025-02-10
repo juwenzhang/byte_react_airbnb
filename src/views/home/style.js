@@ -3,7 +3,7 @@ import styled from "styled-components";
 const HomeWrapper = styled.div`
     height: auto;
     width: 100%;
-    
+
     .homeContent {
         margin: 0 auto;
         width: 1082px;
