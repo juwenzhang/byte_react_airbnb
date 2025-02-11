@@ -32,6 +32,7 @@
 * src/store 状态管理的数据目录
 * src/utils 工具封装目录
 * src/views 路由组件目录
+* src/faker 模拟数据的函数
 
 ---
 ### CSS 样式重置
@@ -165,9 +166,23 @@ export default homeSlice.reducer
 * 但是为了降低我们的项目对 axios 第三方库的依赖程度
   * 我们是需要进行二次封装后使用的，降低耦合度吧
 
+---
 ### base-ui 
 * 含有对 ant-design 或者 material-ui 的二次封装
   * 欢迎各位前端开源爱好者的提交 pr
+
+--- 
+### 项目介绍
+* 该项目主要使用了 react、redux、fakerJs、axios、react-redux、redux-toolkit、ant-design、material-ui
+  * 同时由于后端接口的原因，引入了 fakerJS 来实现前端自行模拟数据，所以说是一个全面的脱离了后端的纯前端静态面
+    * 为什么模拟数据不选择 mock-server 或者 json-server呐
+      * 原因在于使用 mock-server 的话会导致在开发过程中要不断的启动 mock-server 来实现一些效果
+      * 然后使用 fakerJs 的话在代码是可以控制自己的数据模板的，同时也很好的使用 try...catch 语句来实现控制
+      * 所以说就是选择的 fakerJs 工具，同时在未来的工作中也是可以大量使用的呐
+* 同时使用 cargo 配置来实现我们的修改 webpack 配置
+  * 在通过 create-react-app 脚手架中，webpack 的配置是隐藏的
+  * 虽然提供了 `npm run eject` 命令，
+  * 但是还是十分不妥当的呐，因为这个命名是不可逆的，所以说就通过 cargo 来间接性的修改 webpack 配置了
 
 ---
 ### 项目开发规范

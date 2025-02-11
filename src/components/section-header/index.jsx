@@ -4,7 +4,11 @@ import PropTypes from "prop-types"
 import { SectionHeaderWrapper } from "./style/style"
 
 const SectionHeader = memo((props) => {
-    const { title = "home section title", desc } = props
+    const {
+        title = "home section title",
+        desc
+    } = props
+
     return (
         <>
             <SectionHeaderWrapper>
@@ -20,4 +24,4 @@ SectionHeaderWrapper.propTypes = {
     desc: PropTypes.string,
 }
 
-export default SectionHeaderWrapper
+export default SectionHeader

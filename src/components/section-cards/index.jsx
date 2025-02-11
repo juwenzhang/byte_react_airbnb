@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import SectionCardsWrapper from "./style/style";
 import SectionCard from "../section-card";
+import JzhScrollView from "../../base-ui/jzh-scroll-view";
 // import {LeftOutlined, RightOutlined} from "@ant-design/icons";
 
 const SectionCards = memo((props) => {
@@ -20,19 +21,21 @@ const SectionCards = memo((props) => {
 
     return (
         <SectionCardsWrapper>
-            {
-                cards.map((item, index) => (
-                    <div
-                        key={item.id}
-                        onClick={(e) => cardOnclick(index)}
-                    >
-                        <SectionCard
-                            card={item?.card}
-                            isActive={isActive === index}
-                        />
-                    </div>
-                ))
-            }
+            <JzhScrollView>
+                {
+                    cards.map((item, index) => (
+                        <div
+                            key={item.id}
+                            onClick={(e) => cardOnclick(index)}
+                        >
+                            <SectionCard
+                                card={item?.card}
+                                isActive={isActive === index}
+                            />
+                        </div>
+                    ))
+                }
+            </JzhScrollView>
         </SectionCardsWrapper>
     );
 });
