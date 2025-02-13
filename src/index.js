@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter} from "react-router-dom"
+import {BrowserRouter} from "react-router-dom"
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import "antd/dist/reset.css"
@@ -18,13 +18,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
         <Suspense fallback={<LazyPage/>}>
-            <HashRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Provider store={store}>
                     <ThemeProvider theme={ lightTheme }>
                         <App/>
                     </ThemeProvider>
                 </Provider>
-            </HashRouter>
+            </BrowserRouter>
         </Suspense>
     // </React.StrictMode>
 )
