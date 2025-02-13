@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomeSectionHeaderWrapper = styled.div`
+export const SectionHeaderWrapper = styled.div`
     color: #222;
     margin-top: 10px;
     margin-bottom: 20px;

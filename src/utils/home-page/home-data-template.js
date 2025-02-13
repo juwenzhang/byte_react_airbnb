@@ -29,10 +29,12 @@ function createGoodsList(count,
             imageList: createImageList(),
             rate: faker.number.int({min: 0, max: 5}),
             publishDate: faker.date.recent().toISOString(),
+            address: faker.location.city()
     }), {
         count
     })
 }
+
 
 function createHomeDataTemplate(count,
                                 titleLength = { min: 5, max: 10 }) {

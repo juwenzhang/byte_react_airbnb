@@ -18,14 +18,15 @@ export const CenterHeaderWrapper = styled.div`
     }
 
     .icon {
+        color: #69655e;
         width: 15px;
         height: 15px;
-        border-radius: 7px;
-        background-color: ${props => props.theme.colors.primaryColor};
-        margin-right: 10px;
+        line-height: 15px;
+        margin-right: 20px;
     }
 
     transition: all 0.5s ease;
+
     &:hover {
         box-shadow: 0 0 10px 1px ${props => props.theme.colors.primaryColor};
     }

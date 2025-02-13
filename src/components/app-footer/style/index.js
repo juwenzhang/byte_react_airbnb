@@ -34,8 +34,11 @@ export const AppFooterWrapper = styled.div`
 
 export const FooterFooterWrapper = styled.div`
     position: absolute;
-    width: auto;
-    height: 50px;
+    width: 75%;
+    height: 130px;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 100;
+    color: #918d8d;
 `
