@@ -2,7 +2,7 @@
   "name": "byte_react_airbnb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://juwenzhang.github.io/react_airbnb/",
+  "homepage": "https://juwenzhang.github.io/byte_react_airbnb/",
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
     "@emotion/react": "^11.14.0",
