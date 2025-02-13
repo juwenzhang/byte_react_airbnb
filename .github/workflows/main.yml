@@ -16,6 +16,12 @@ jobs:
   build-and-deploy:
     # 在最新版的 Ubuntu 系统下运行
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # 允许写入仓库内容
+      pages: write # 允许写入 GitHub Pages 内容
+      id-token: write # 允许写入 ID Token（如果需要）
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
