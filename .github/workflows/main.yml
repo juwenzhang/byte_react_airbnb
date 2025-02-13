@@ -1,30 +1,48 @@
 name: Build and Deploy
 
-# 当有新push或者pr时运行
+# 当有新 push 或者 PR 时运行
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - develop # 添加其他分支以供开发测试
   pull_request:
-    branches: [master]
+    branches:
+      - master
+      - develop # 添加其他分支以供开发测试
 
 jobs:
-  # 一项叫做build-and-deploy的任务
+  # 一项叫做 build-and-deploy 的任务
   build-and-deploy:
-    # 在最新版的Ubuntu系统下运行
+    # 在最新版的 Ubuntu 系统下运行
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2 # 来自官方脚本：https://github.com/marketplace/actions/checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 获取完整历史记录，有助于调试
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Show environment variables
+        run: env | sort
 
       - name: Install and Build
         run: |
           npm install
-          CI=false npm run build
+          npm run build
+
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3 # 脚本来自： https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GITHUB_TOKEN
           BRANCH: gh-pages
           FOLDER: build
           CLEAN: true
