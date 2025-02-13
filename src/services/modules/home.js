@@ -17,3 +17,10 @@ export const getHomeLowerPriceData = () => {
         url: "/home/LowerGoodPrice"
     })
 }
+
+export const getHoneLongForInfoData = () => {
+    return JWZRequest.get({
+        url: "/home/longForInfoData"
+    })
+}
+

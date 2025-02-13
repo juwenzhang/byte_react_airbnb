@@ -60,4 +60,12 @@ export const SectionItemWrapper = styled.div`
             transform: translate3d(0, 0 , 10px);
         }
     }
+
+    @media (max-width: 768px) {
+        width: 50%
+    }
+    
+    @media (max-width: 420px) {
+        width: 100%;
+    }
 `

@@ -26,10 +26,10 @@ const JzhScrollViewWrapper = styled.div`
         }
     }
     .jzh-scroll-left-button {
-        left: -25px;
+        left: -8px;
     }
     .jzh-scroll-right-button {
-        right: -25px;
+        right: -8px;
     }
 `
 
