@@ -16,7 +16,6 @@ jobs:
   build-and-deploy:
     # 在最新版的 Ubuntu 系统下运行
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
