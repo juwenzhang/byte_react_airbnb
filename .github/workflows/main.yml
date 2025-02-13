@@ -1,38 +1,30 @@
-name: CI
+name: Build and Deploy
+
+# 当有新push或者pr时运行
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
 
 jobs:
-  main:
+  # 一项叫做build-and-deploy的任务
+  build-and-deploy:
+    # 在最新版的Ubuntu系统下运行
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        persist-credentials: false
-        
-    # react项目为npm run-script build，vue项目改为npm run build
-    - name: Install and Build
-      run: |
-        npm install
-        npm run-script build
-     
-    # react项目的FOLDER为build，vue项目改为dist   
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.0
-      with:
-        ACCESS_TOKEN: ${{ secrets.BYTE_REACT_AIRBNB }}
-        BRANCH: master
-        FOLDER: build
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2 # 来自官方脚本：https://github.com/marketplace/actions/checkout
 
-    # 示例：使用环境文件替代 set-output
-    - name: Create Environment File
-      run: |
-        echo "DEPLOY_STATUS=success" > .env
-
-    - name: Use Environment File
-      run: |
-        source .env
-        echo "Deployment status: $DEPLOY_STATUS"
+      - name: Install and Build
+        run: |
+          npm install
+          CI=false npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3 # 脚本来自： https://github.com/JamesIves/github-pages-deploy-action
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
