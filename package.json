@@ -33,7 +33,9 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "check": "lint-staged",
-    "lint": "eslint -c src .js -c src .jsx"
+    "lint": "eslint -c src .js -c src .jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.{jsx,ts,tsx,ts}": [
@@ -69,6 +71,7 @@
     "eslint": "^8.57.1",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react": "^7.37.4",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "less": "^4.2.2",
