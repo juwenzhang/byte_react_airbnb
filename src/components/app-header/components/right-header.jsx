@@ -1,5 +1,6 @@
 import {memo, useEffect, useState} from "react"
 import { RightHeaderWrapper } from "../style/rightHeader"
+import {GithubOutlined, GlobalOutlined, UnorderedListOutlined} from "@ant-design/icons";
 
 const RightHeader = memo(() => {
     const [panelIsShow, setPanelIsShow] = useState(false)
@@ -40,18 +41,21 @@ const RightHeader = memo(() => {
                 <div className="buttons">
                     <span>登录</span>
                     <span>注册</span>
-                    <span>图标</span>
+                    <GlobalOutlined />
                 </div>
                 <div className="profile"
-                     // onMouseOver={() => setPanelIsShow(true)}
-                     // onMouseOut={() => setPanelIsShow(false)}
+                    // onMouseOver={() => setPanelIsShow(true)}
+                    // onMouseOut={() => setPanelIsShow(false)}
                      onClick={(e) => profileClickHandle(e)}
                 >
                     <div className="mark"></div>
-
+                    <div className="app-header-content">
+                        <div className="app-header-list"><UnorderedListOutlined/></div>
+                        <div className="app-header-icon"><GithubOutlined/></div>
+                    </div>
                     {/* 开始实现我们的面板 */}
                     {/*{ panelIsShow ? panel : null }*/}
-                    { panelIsShow && panel }
+                    {panelIsShow && panel}
                 </div>
             </RightHeaderWrapper>
         </>

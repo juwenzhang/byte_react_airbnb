@@ -29,7 +29,9 @@ function createGoodsList(count,
             imageList: createImageList(),
             rate: faker.number.int({min: 0, max: 5}),
             publishDate: faker.date.recent().toISOString(),
-            address: faker.location.city()
+            address: faker.location.city(),
+            avatar: faker.image.avatar(),
+            userName: faker.person.fullName(),
     }), {
         count
     })
