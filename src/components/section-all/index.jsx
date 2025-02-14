@@ -1,4 +1,4 @@
-import {memo, useCallback, useState} from "react";
+import {memo, useCallback, useMemo, useState} from "react";
 import PropTypes from "prop-types";
 import {faker} from "@faker-js/faker";
 import {useNavigate} from "react-router-dom";
@@ -22,18 +22,21 @@ const SectionAll = memo((props) => {
         goodsList
     } = data
 
-    const uniqueAddresses = new Set(goodsList.map(item => item.address));
     // react-hooks/exhaustive-deps
-    const cards = [
-        {
-            card: "all",
-            id: faker.string.uuid(),
-        },
-        ...Array.from(uniqueAddresses).map(address => ({
-            card: address,
-            id: faker.string.uuid(),
-        }))
-    ];
+    // 使用 useMemo 缓存 cards 数组
+    const cards = useMemo(() => {
+        const uniqueAddresses = new Set(goodsList.map(item => item.address));
+        return [
+            {
+                card: "all",
+                id: faker.string.uuid(),
+            },
+            ...Array.from(uniqueAddresses).map(address => ({
+                card: address,
+                id: faker.string.uuid(),
+            }))
+        ];
+    }, [goodsList]);
 
     const [currentCardName, setCurrentCardName] = useState(cards[0].card === "all" && "" );
     const [dataListState, setDataListState] = useState(goodsList)
