@@ -23,6 +23,7 @@ const SectionAll = memo((props) => {
     } = data
 
     const uniqueAddresses = new Set(goodsList.map(item => item.address));
+    // react-hooks/exhaustive-deps
     const cards = [
         {
             card: "all",
@@ -50,12 +51,18 @@ const SectionAll = memo((props) => {
         )
         setDataListState(newDataState)
         // eslint-disable-next-line
-    }, [])
+    }, [cards])
 
     const navigate = useNavigate();
-    function SectionFooterClick() {
-        navigate("/entire", data)
-    }
+    const SectionFooterClick = useCallback(() => {
+        navigate("/entire", {
+            state: {
+                "filterCards": cards,
+                "goodList": goodsList
+            }
+        });
+    }, [navigate, cards, goodsList]);
+
 
     return (
         <SectionAllWrapper>

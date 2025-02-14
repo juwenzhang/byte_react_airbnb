@@ -43,6 +43,22 @@ export const RightHeaderWrapper = styled.div`
             border-radius: 7px;
             background-color: ${props => props.theme.colors.primaryColor};
         }
+        
+        .app-header-content {
+            display: flex;
+            flex-flow: row nowrap;
+            position: relative;
+            justify-content: center;
+            align-content: center;
+            top: 7px;
+            font-size: 25px;
+            gap: 20px;
+            padding: 0 5px;
+            
+            @media (max-width: 450px) {
+                gap: 5px
+            }
+        }
 
         .panel {
             width: 240px;
@@ -73,6 +89,10 @@ export const RightHeaderWrapper = styled.div`
 
             .top {
                 border-bottom: 1px solid #a9a6a6;
+            }
+
+            @media (max-width: 450px) {
+                width: 100px;
             }
         }
 
