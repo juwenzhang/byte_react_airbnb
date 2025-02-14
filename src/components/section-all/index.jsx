@@ -1,6 +1,7 @@
 import {memo, useCallback, useState} from "react";
 import PropTypes from "prop-types";
 import {faker} from "@faker-js/faker";
+import {useNavigate} from "react-router-dom";
 
 import SectionList from "../section-list";
 import SectionHeader from "../section-header";
@@ -51,6 +52,10 @@ const SectionAll = memo((props) => {
         // eslint-disable-next-line
     }, [])
 
+    const navigate = useNavigate();
+    function SectionFooterClick() {
+        navigate("/entire", data)
+    }
 
     return (
         <SectionAllWrapper>
@@ -69,6 +74,7 @@ const SectionAll = memo((props) => {
             />
             <SectionFooter
                 content={currentCardName}
+                SectionFooterClick={SectionFooterClick}
             />
         </SectionAllWrapper>
     )
