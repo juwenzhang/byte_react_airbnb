@@ -1,0 +1,80 @@
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/**
+ * @license React
+ * react-dom-client.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-dom.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * use-sync-external-store-with-selector.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * react-router v7.1.5
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**![github](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUxMS42IDc2LjNDMjY0LjMgNzYuMiA2NCAyNzYuNCA2NCA1MjMuNSA2NCA3MTguOSAxODkuMyA4ODUgMzYzLjggOTQ2YzIzLjUgNS45IDE5LjktMTAuOCAxOS45LTIyLjJ2LTc3LjVjLTEzNS43IDE1LjktMTQxLjItNzMuOS0xNTAuMy04OC45QzIxNSA3MjYgMTcxLjUgNzE4IDE4NC41IDcwM2MzMC45LTE1LjkgNjIuNCA0IDk4LjkgNTcuOSAyNi40IDM5LjEgNzcuOSAzMi41IDEwNCAyNiA1LjctMjMuNSAxNy45LTQ0LjUgMzQuNy02MC44LTE0MC42LTI1LjItMTk5LjItMTExLTE5OS4yLTIxMyAwLTQ5LjUgMTYuMy05NSA0OC4zLTEzMS43LTIwLjQtNjAuNSAxLjktMTEyLjMgNC45LTEyMCA1OC4xLTUuMiAxMTguNSA0MS42IDEyMy4yIDQ1LjMgMzMtOC45IDcwLjctMTMuNiAxMTIuOS0xMy42IDQyLjQgMCA4MC4yIDQuOSAxMTMuNSAxMy45IDExLjMtOC42IDY3LjMtNDguOCAxMjEuMy00My45IDIuOSA3LjcgMjQuNyA1OC4zIDUuNSAxMTggMzIuNCAzNi44IDQ4LjkgODIuNyA0OC45IDEzMi4zIDAgMTAyLjItNTkgMTg4LjEtMjAwIDIxMi45YTEyNy41IDEyNy41IDAgMDEzOC4xIDkxdjExMi41Yy44IDkgMCAxNy45IDE1IDE3LjkgMTc3LjEtNTkuNyAzMDQuNi0yMjcgMzA0LjYtNDI0LjEgMC0yNDcuMi0yMDAuNC00NDcuMy00NDcuNS00NDcuM3oiIC8+PC9zdmc+) */
+
+/**![unordered-list](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNjYWNhY2EiIHZpZXdCb3g9IjY0IDY0IDg5NiA4OTYiIGZvY3VzYWJsZT0iZmFsc2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTkxMiAxOTJIMzI4Yy00LjQgMC04IDMuNi04IDh2NTZjMCA0LjQgMy42IDggOCA4aDU4NGM0LjQgMCA4LTMuNiA4LTh2LTU2YzAtNC40LTMuNi04LTgtOHptMCAyODRIMzI4Yy00LjQgMC04IDMuNi04IDh2NTZjMCA0LjQgMy42IDggOCA4aDU4NGM0LjQgMCA4LTMuNiA4LTh2LTU2YzAtNC40LTMuNi04LTgtOHptMCAyODRIMzI4Yy00LjQgMC04IDMuNi04IDh2NTZjMCA0LjQgMy42IDggOCA4aDU4NGM0LjQgMCA4LTMuNiA4LTh2LTU2YzAtNC40LTMuNi04LTgtOHpNMTA0IDIyOGE1NiA1NiAwIDEwMTEyIDAgNTYgNTYgMCAxMC0xMTIgMHptMCAyODRhNTYgNTYgMCAxMDExMiAwIDU2IDU2IDAgMTAtMTEyIDB6bTAgMjg0YTU2IDU2IDAgMTAxMTIgMCA1NiA1NiAwIDEwLTExMiAweiIgLz48L3N2Zz4=) */
