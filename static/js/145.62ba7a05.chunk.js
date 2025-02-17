@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbyte_react_airbnb=self.webpackChunkbyte_react_airbnb||[]).push([[145],{2145:(e,a,r)=>{r.r(a),r.d(a,{default:()=>c});var t=r(5043),b=r(579);const c=(0,t.memo)((()=>(0,b.jsx)(b.Fragment,{children:(0,b.jsx)("div",{children:"Detail page"})})))}}]);
-//# sourceMappingURL=145.62ba7a05.chunk.js.map
