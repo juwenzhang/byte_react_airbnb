@@ -1,4 +1,4 @@
-import { memo } from "react";
+import {Fragment, memo} from "react";
 import PropTypes from "prop-types"
 
 import { SectionHeaderWrapper } from "./style/style"
@@ -10,12 +10,12 @@ const SectionHeader = memo((props) => {
     } = props
 
     return (
-        <>
+        <Fragment>
             <SectionHeaderWrapper>
                 <div className="title">{title}</div>
                 { desc && <div className="desc">{ desc }</div> }
             </SectionHeaderWrapper>
-        </>
+        </Fragment>
     )
 })
 

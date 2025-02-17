@@ -10,7 +10,7 @@ const EntireFilterWrapper = styled.div`
     background: #f4f8fa;
 
     position: fixed;
-    z-index: 99;
+    z-index: 10;
     left: 0;
     right: 0;
     top: 80px;
