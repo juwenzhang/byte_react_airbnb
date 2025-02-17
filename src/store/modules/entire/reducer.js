@@ -3,7 +3,8 @@ import * as ActionTypes from "./constants"
 const initialState = {
     currentPage: 0,
     entireList: [],
-    totalCount: 0
+    totalCount: 0,
+    isLoading: false
 }
 
 function entireReducer(state = initialState, action) {
@@ -22,6 +23,11 @@ function entireReducer(state = initialState, action) {
             return {
                 ...state,
                 totalCount: action.totalCount
+            }
+        case ActionTypes.CHANGE_IS_LOADING:
+            return {
+                ...state,
+                isLoading: action.isLoading
             }
         default:
             return state

@@ -6,9 +6,10 @@ import SectionItem from "../../../../components/section-item";
 
 const EntireList = memo(() => {
     // 开始展示我们的数据
-    const {entireList} = useSelector(state => {
+    const {entireList, isLoading} = useSelector(state => {
         return {
-            entireList :state.entire.entireList
+            entireList :state.entire.entireList,
+            isLoading :state.entire.isLoading
         }
     }, shallowEqual)
 
@@ -20,14 +21,20 @@ const EntireList = memo(() => {
 
     return (
         <EntireListWrapper>
+            <div className="entire-list-content">
+                {
+                    entireList.map((item) => {
+                        return <SectionItem
+                            item={item}
+                            avg={avg}
+                            key={item.id}
+                        />
+                    })
+                }
+            </div>
+
             {
-                entireList.map((item) => {
-                    return <SectionItem
-                        item={item}
-                        avg={avg}
-                        key={item.id}
-                    />
-                })
+                isLoading && <div className="entire-list-cover"></div>
             }
         </EntireListWrapper>
     )

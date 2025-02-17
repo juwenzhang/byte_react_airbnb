@@ -24,7 +24,7 @@ export const routes = [
     },
 
     {
-        path: "./detail",
+        path: "/detail",
         element: <Detail/>,
     }
 ]

@@ -1,7 +1,11 @@
-import { memo } from "react";
+import {Fragment, memo, useCallback} from "react";
 import PropTypes from "prop-types";
 import {SectionItemWrapper} from "./style/style";
 import AntJzhRate from "../../base-ui/ant-jzh-rate";
+import {Carousel} from "antd";
+import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {changeDetailInfoAction} from "../../store/modules/detail";
 
 const SectionItem = memo((props) => {
     const {
@@ -9,8 +13,17 @@ const SectionItem = memo((props) => {
         avg
     } = props
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    // eslint-disable-next-line
+    const ToDetailHandle = useCallback((data) => {
+        dispatch(changeDetailInfoAction(data))
+        navigate("/detail")
+        // eslint-disable-next-line
+    }, [item])
+
     return (
-        <>
+        <Fragment>
             <SectionItemWrapper
                 $ItemTextTitleColor={item?.title?.color || "#46413e" }
                 $ItemTextDetailColor={item?.detail?.color || "#675e4e" }
@@ -18,20 +31,29 @@ const SectionItem = memo((props) => {
                 $avg={avg}
             >
                 <div className="section-item-inner">
-                    <div className="section-item-cover">
-                        <a
-                            href={item?.imageList[0]?.imageUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={item?.imageList[0]?.imageUrl}
-                                alt="图片正在加载..."
-                            />
-                        </a>
-                    </div>
+                    <Carousel
+                        autoplay
+                        arrows
+                    >
+                        {
+                            item?.imageList.map(imgEl => {
+                                return (
+                                    <div
+                                        className="section-item-cover"
+                                        key={imgEl.id}
+                                        onClick={() => ToDetailHandle(item?.imageList)}
+                                    >
+                                        <img
+                                            src={imgEl?.imageUrl}
+                                            alt="图片正在加载..."
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                    </Carousel>
                     <div className="section-item-title">
-                        {item.title}
+                    {item.title}
                     </div>
                     <div className="section-item-detail">
                         {item.desc.slice(0, 20)}...
@@ -49,7 +71,7 @@ const SectionItem = memo((props) => {
                     </div>
                 </div>
             </SectionItemWrapper>
-        </>
+        </Fragment>
     )
 })
 

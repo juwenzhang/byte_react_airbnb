@@ -15,16 +15,12 @@ const Entire = memo(() => {
     const dispatch = useDispatch()
 
     const [filterCardsState, setFilterCardsState] = useState([])
-    const [goodListState, setGoodListState] = useState([])
 
     // 如果直接打印的话会出现数据为空的，所以说我们需要使用 useEffect
     useEffect(() => {
         setFilterCardsState(filterCards)
-        setGoodListState(goodList)
         // 用于组件挂载前的数据初始化
     }, [
-        filterCardsState,
-        goodListState,
         filterCards,
         goodList
     ]);
@@ -40,7 +36,9 @@ const Entire = memo(() => {
                 filterCards={filterCardsState}
             />
             <EntireList/>
-            <EntirePagination/>
+            <EntirePagination
+                goodsList={goodList}
+            />
         </EntireWrapper>
     )
 })

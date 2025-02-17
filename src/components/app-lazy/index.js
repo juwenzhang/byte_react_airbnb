@@ -4,7 +4,7 @@ export const LazyStyle = styled.div`
     .lazyBack {
         width: 100%;
         height: 100vh;
-        background-color: rgba(203, 199, 199, 0.2);
+        background-color: rgba(255, 0, 0, 0.2);
 
         .context {
             overflow: hidden;

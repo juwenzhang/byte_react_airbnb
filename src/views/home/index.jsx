@@ -1,4 +1,4 @@
-import {memo} from "react";
+import {Fragment, memo} from "react";
 import HomeWrapper from "./style";
 import HomeBanner from "./childrenComponet/Home-Banner/HomeBanner";
 import HomeSectionOne from "./childrenComponet/home-section-one";
@@ -8,7 +8,7 @@ import HomeSectionLongFor from "./childrenComponet/home-section-long-for";
 
 const Home = memo(() => {
     return (
-        <>
+        <Fragment>
             <HomeWrapper>
                 <HomeBanner />
                 <div className="homeContent">
@@ -18,7 +18,7 @@ const Home = memo(() => {
                     <HomeSectionLongFor/>
                 </div>
             </HomeWrapper>
-        </>
+        </Fragment>
     )
 })
 
